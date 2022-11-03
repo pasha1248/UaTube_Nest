@@ -31,7 +31,7 @@ export class VideoEntity extends Base {
 
   @ManyToOne(() => UserEntity, (user) => user.videos)
   @JoinColumn({ name: 'user_id' })
-  user: UserEntity[];
+  user: UserEntity;
 
   @OneToMany(() => CommentEntity, (comment) => comment.video)
   comments: CommentEntity[];
